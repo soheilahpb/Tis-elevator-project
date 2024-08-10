@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+    font-family: first_font;
+    src: url("../font/Kalam-Regular.ttf") format("opentype");
+}
+@font-face{
+    font-family: second_font;
+    src: url("../font/BreeSerif-Regular.ttf") format("opentype");
+}
+@keyframes tab {
+    to {
+        border-right: 1px solid rgba(0, 0, 0, 0);
+    }
+}

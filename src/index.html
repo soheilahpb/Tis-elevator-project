@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tis Elevator</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="swiper.css">
+
+
+</head>
+
+<body class="font-primary">
+    <main class="w-full h-screen overflow-y-scroll 2xl:container mx-auto overflow-x-hidden">
+        <div id="main" class="w-full">
+            <section class="w-full relative h-screen bg-ThirdImage bg-cover bg-no-repeat bg-center py-5 px-5 mb-0"
+                id="home">
+                <div class="dark absolute w-full h-screen top-0 left-0 bg-[#47424234]"></div>
+                <header class="w-full  flex items-center justify-between relative p-2">
+                    <figure class="w-1/5  relative z-10">
+                        
+                    </figure>
+                    <nav class="w-2/3 hidden md:flex relative z-10  ps-20 ">
+                        <ul class="list-none flex items-center justify-evenly w-full">
+                            <a href="#home">
+                                <li class="text-[#C23210]  p-2 capitalize text-[1.2vw] cursor-pointer relative">home
+                                    <div class=" h-[2px] absolute bg-[#C23210] bottom-0 left-0 w-full"></div>
+                                </li>
+                            </a>
+                            <a href="#about_us">
+                                <li
+                                    class="group text-white p-2 capitalize text-[1.2vw] cursor-pointer relative hover:text-[#C23210] duration-300">
+                                    about us
+                                    <div
+                                        class=" h-[2px] absolute bg-[#C23210] bottom-0 left-[50%] w-[0] group-hover:w-full group-hover:left-0 duration-300">
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="#projects">
+                                <li
+                                    class="group text-white p-2 capitalize text-[1.2vw] cursor-pointer relative hover:text-[#C23210] duration-300">
+                                    projects
+                                    <div
+                                        class=" h-[2px] absolute bg-[#C23210] bottom-0 left-[50%] w-[0] group-hover:w-full group-hover:left-0 duration-300">
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="#contact">
+                                <li
+                                    class="group text-white p-2 capitalize text-[1.2vw] cursor-pointer relative hover:text-[#C23210] duration-300">
+                                    contact us
+                                    <div
+                                        class=" h-[2px] absolute bg-[#C23210] bottom-0 left-[50%] w-0 group-hover:w-full group-hover:left-0 duration-300">
+                                    </div>
+                                </li>
+                            </a>
+                        </ul>
+                    </nav>
+                    <div onclick="open_close()" id="list" class="flex md:hidden relative z-10 cursor-pointer">
+                        <i class="bi bi-list text-white text-3xl hover:text-[#C23210] hover:rotate-90 duration-500"></i>
+                    </div>
+                    <ul id="navigation"
+                        class="absolute w-full top-[100%] flex bg-[#d8a1952c] flex-col items-center justify-evenly h-[180px] z-20 md:hidden translate-x-[120%] duration-500">
+                        <a href="#home" class="w-full h-1/4 flex items-center justify-center">
+                            <li
+                                class="w-full h-full flex items-center ps-7 capitalize text-white text-lg font-medium duration-300 hover:text-[#C23210] hover:bg-[#c2311038] cursor-pointer">
+                                home</li>
+                        </a>
+                        <a href="#about_us" class="w-full h-1/4 flex items-center justify-center">
+                            <li
+                                class="w-full h-full flex items-center ps-7 capitalize text-white text-lg font-medium duration-300 hover:text-[#C23210] hover:bg-[#c2311038] cursor-pointer">
+                                about</li>
+                        </a>
+                        <a href="#projects" class="w-full h-1/4 flex items-center justify-center">
+                            <li
+                                class="w-full h-full flex items-center ps-7 capitalize text-white text-lg font-medium duration-300 hover:text-[#C23210] hover:bg-[#c2311038] cursor-pointer">
+                                projects</li>
+                        </a>
+                        <a href="#contact" class="w-full h-1/4 flex items-center justify-center">
+                            <li
+                                class="w-full h-full flex items-center ps-7 capitalize text-white text-lg font-medium duration-300 hover:text-[#C23210] hover:bg-[#c2311038] cursor-pointer">
+                                contact us</li>
+                        </a>
+                    </ul>
+
+                </header>
+                <div class="w-full p-8 pt-32 relative z-10 flex justify-end ">
+                    <div
+                        class="md:w-2/3 w-full py-16 flex flex-col items-end justify-center opacity-0 duration-1000 text">
+                        <p class="w-1/3 text-end"><span
+                                class="capitalize text-white my-2 text-center text-[3.8vw] font-tis1">with
+                            </span><span
+                                class="text-white capitalize my-2 text-center text-[3.8vw] w-full font-tis1">TIS</span>
+                        </p>
+                        <p class="capitalize  text-white lg:my-2 text-end text-[3.8vw] w-1/2 font-tis1">
+                            move between</p>
+                        <p class="w-1/2 text-center flex flex-wrap"><span
+                                class="capitalize text-white lg:my-2 text-center text-[3.8vw] font-tis1 spacing-px  flex items-center justify-center">floors
+                            </span><span id="demo"
+                                class="capitalize text-white lg:my-2 text-center text-[3.8vw] font-tis1 spacing-px -r-2 animate-whiteSpace flex items-center justify-center ms-2"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full absolute top-[98%] sm:top-[101%] lg:top-[105%] xl:top-[112%] left-0 h-[100px] -z-10">
+                    <svg class="absolute bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path fill="#9990888f" fill-opacity="1"
+                            d="M0,192L80,213.3C160,235,320,277,480,266.7C640,256,800,192,960,192C1120,192,1280,256,1360,288L1440,320L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+                        </path>
+                    </svg>
+                    <svg class="absolute bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path fill="#999088" fill-opacity="1"
+                            d="M0,96L80,90.7C160,85,320,75,480,101.3C640,128,800,192,960,197.3C1120,203,1280,149,1360,122.7L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+                        </path>
+                    </svg>
+                </div>
+            </section>
+            <!-- ********************slider section-->
+            <section class="h-[110vh] mb-20 flex flex-col items-center justify-center w-full overflow-hidden">
+                <div></div> <!-- title for this section -->
+                <div class="relative h-[50vh] text-[14px] text-[#000] m-0 p-0">
+                    <!-- Swiper -->
+                    <swiper-container class="mySwiper w-full py-[50px] my-[50px]" pagination="true" effect="coverflow"
+                        grab-cursor="true" centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50"
+                        coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="1"
+                        coverflow-effect-slide-shadows="true">
+                        <swiper-slide class="bg-cover bg-center w-[400px] h-[400px]">
+                            <img src="imgs/Tis_Asanbar_Logo-01.svg" class="block w-full" />
+                        </swiper-slide>
+                        <swiper-slide class="bg-cover bg-center w-[400px] h-[400px]">
+                            <img src="imgs/IMG_6486.webp" class="block w-full" />
+                        </swiper-slide>
+                        <swiper-slide class="bg-cover bg-center w-[400px] h-[400px]">
+                            <img src="imgs/IMG_6462.webp" class="block w-full" />
+                        </swiper-slide>
+                        <swiper-slide class="bg-cover bg-center w-[400px] h-[400px]">
+                            <img src="imgs/IMG_4362.webp" class="block w-full" />
+                        </swiper-slide>
+                        <swiper-slide class="bg-cover bg-center w-[400px] h-[400px]">
+                            <img src="imgs/IMG_6873.webp" class="block w-full" />
+                        </swiper-slide>
+                        <swiper-slide class="bg-cover bg-center w-[400px] h-[400px]">
+                            <img src="imgs/IMG_6616.webp" class="block w-full" />
+                        </swiper-slide>
+                    </swiper-container>
+            </section>
+            <!-- ************slider ends -->
+
+
+
+            <!-- ****************profiles -->
+            <section class="h-auto w-full flex flex-col items-center justify-between" id="about_us">
+                <div class="mt-8">
+                    <p class="capitalize font-tis2 text-center text-5xl text-[#C23210]">meet us</p>
+                </div>
+                <article class=" flex flex-wrap items-center lg:justify-evenly justify-center mb-10 w-full">
+                    <div
+                        class="w-4/5 lg:w-1/3 md:h-[95%] h-1/2 p-10 rounded-lg shadow-xl flex items-center justify-center flex-col my-8">
+                        <figure class="flex items-center justify-between flex-col w-[250px] h-[300px] ">
+                            <img src="imgs/h_pro.webp"
+                                class="h-[210px] w-[210px] object-top overflow-hidden object-cover rounded-[50%]"
+                                alt="">
+                            <figcaption class="capitalize text-[#C23210] text-2xl font-tis2">Hadi Aharipoor</figcaption>
+                        </figure>
+                        <div class="w-full flex items-center justify-center flex-col mt-4 py-4">
+                            <p class="w-4/5 py-2">Doing all elevator works , including installation , service and
+                                maintenance , repair and fault detection!</p>
+                            <div class="w-4/5 flex items-center justify-evenly py-2">
+                                <a class="linkedin relative group"
+                                    href="https://www.linkedin.com/in/hadi-aharipour-3a1540291/" target="_blank">
+                                    <i
+                                        class="bi bi-linkedin text-[#C23210] cursor-pointer duration-500 hover:text-[#0E435B]"></i>
+                                    <span
+                                        class="w-[0px] absolute -right-24 top-5 h-[40px] rounded-xl duration-300 overflow-hidden  group-hover:w-[220px] flex items-center justify-center">linkedin</span>
+                                </a>
+                                <a class="mail relative group" href="https://mail.google.com/" target="_blank">
+                                    <i
+                                        class="bi bi-envelope-fill text-[#C23210] cursor-pointer duration-500 hover:text-[#0E435B]"></i>
+                                    <span
+                                        class="w-[0px] absolute -right-24 top-5 h-[40px] rounded-xl duration-300 overflow-hidden group-hover:w-[220px] flex items-center justify-center">hadi-aharipour@outlook.com</span>
+                                </a>
+                                <a class="phone relative group">
+                                    <i
+                                        class="bi bi-telephone-fill text-[#C23210] cursor-pointer duration-500 hover:text-[#0E435B]"></i>
+                                    <span
+                                        class="w-[0px] absolute -right-24 top-5 h-[40px] rounded-xl duration-300 overflow-hidden group-hover:w-[220px] flex items-center justify-center">+989146961720</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-4/5 lg:w-1/3 md:h-[95%] h-1/2 p-10 rounded-lg shadow-xl flex items-center justify-center flex-col my-8">
+                        <figure class="flex items-center justify-between flex-col w-[250px] h-[300px] ">
+                            <img src="imgs/m_pro.webp"
+                                class="h-[210px] w-[210px] object-top overflow-hidden object-cover rounded-[50%]"
+                                alt="">
+                            <figcaption class="capitalize text-[#C23210] text-2xl font-tis2">Mehdi Aharipoor
+                            </figcaption>
+                        </figure>
+                        <div class="w-full flex items-center justify-center flex-col mt-4 py-4">
+                            <p class="w-4/5 py-2">Doing all elevator works , including installation , service and
+                                maintenance , repair and fault detection!</p>
+                            <div class="w-4/5 flex items-center justify-evenly py-2">
+                                <a class="linkedin relative group" href="https://www.linkedin.com/in/mehdi-aharipour-5a3320310/">
+                                    <i
+                                        class="bi bi-linkedin text-[#C23210] cursor-pointer duration-500 hover:text-[#0E435B]"></i>
+                                    <span
+                                        class="w-[0px] absolute -right-24 top-5 h-[40px] rounded-xl duration-300 overflow-hidden  group-hover:w-[220px] flex items-center justify-center">linkedin</span>
+                                </a>
+                                <a class="mail relative group" href="https://mail.google.com/" target="_blank">
+                                    <i
+                                        class="bi bi-envelope-fill text-[#C23210] cursor-pointer duration-500 hover:text-[#0E435B]"></i>
+                                    <span
+                                        class="w-[0px] absolute -right-24 top-5 h-[40px] rounded-xl duration-300 overflow-hidden group-hover:w-[220px] flex items-center justify-center">mehdi-aharipour@outlook.com</span>
+                                </a>
+                                <a class="phone relative group">
+                                    <i
+                                        class="bi bi-telephone-fill text-[#C23210] cursor-pointer duration-500 hover:text-[#0E435B]"></i>
+                                    <span
+                                        class="w-[0px] absolute -right-24 top-5 h-[40px] rounded-xl duration-300 overflow-hidden group-hover:w-[220px] flex items-center justify-center">+989143038944</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+            <!-- profiles ends here! -->
+
+
+            <!-- ************works and projects -->
+            <section
+                class="p-4 w-full min-h-[130vh] bg-FirstImage bg-cover flex flex-col items-center justify-start relative mb-6"
+                id="projects">
+                <div class="bg-[#c23110a1] w-full h-full absolute top-0 left-0"></div>
+                <div
+                    class="w-full text-white font-tis2 text-center text-3xl md:text-6xl font-thin capitalize z-10 my-4">
+                    works and projects</div>
+                <div id="slider" class="w-full min-h-[75vh] flex items-center justify-center z-10 my-4">
+                    <figure class="lg:w-1/3 md:w-1/2 w-full flex items-center justify-center">
+                        <div
+                            class="flex items-center justify-start flex-col rounded-xl overflow-hidden w-[56%] bg-[#c2311026]">
+                            <a href="_p_one.html" target="_blank  ">
+                                <img src="imgs/mahabad.webp" alt="" class="w-full h-full object-cover">
+                            </a>
+                            <figcaption class="p-2">
+                                <h3 class="font-medium text-center text-xl uppercase text-white font-tis2">6 story
+                                    building
+                                </h3>
+                                <p class="text-white text-center text-sm">Double door</p>
+                                <p class="text-white text-center text-xs">
+                                    Three doors on one side and three doors on the other side
+                                </p>
+                                <p class="text-white text-center text-sm">Gearless</p>
+                                <p class="text-white text-center text-sm">MR</p>
+                            </figcaption>
+                        </div>
+                    </figure>
+                    <figure class="p-5 hidden md:flex md:w-1/2 lg:w-1/3 items-center justify-center">
+                        <div
+                            class="flex items-center justify-start flex-col rounded-xl overflow-hidden w-[86%] bg-[#c2311063]">
+                            <a href="_p_two.html" target="_blank">
+                                <img src="imgs/IMG_4949.webp" alt="" class="w-full h-full object-cover">
+                            </a>
+                            <figcaption class="p-2">
+                                <h3 class="font-medium text-center text-xl uppercase text-white font-tis2">4 story
+                                    building </h3>
+
+                                <p class="text-white text-center text-sm">Gearbox</p>
+                                <p class="text-white text-center text-sm">MR</p>
+                            </figcaption>
+                        </div>
+                    </figure>
+                    <figure class="lg:w-1/3 md:w-1/2 w-full flex items-center justify-center">
+                        <div
+                            class="flex items-center justify-start flex-col rounded-xl overflow-hidden w-[56%] bg-[#c2311026]">
+                            <a href="_P_three.html" target="_blank">
+                                <img src="imgs/IMG_6617.webp" alt="" class="w-full h-full object-cover">
+                            </a>
+                            <figcaption class="p-2">
+                                <h3 class="font-medium text-center text-xl uppercase text-white font-tis2">9 story
+                                    building
+                                </h3>
+                                <p class="text-white text-center text-sm">Double door</p>
+                                <p class="text-white text-center text-xs">
+                                    Eight doors on one side and one door on the other side
+                                </p>
+                                <p class="text-white text-center text-sm">Gearless</p>
+                                <p class="text-white text-center text-sm">MRL</p>
+                            </figcaption>
+                        </div>
+                    </figure>
+                </div>
+                <a href="projects.html" class="z-10 ">
+                    <span
+                        class="w-[170px] h-[40px] border border-white flex items-center justify-center rounded-3xl cursor-pointer my-4">
+                        <p
+                            class="w-full font-tis2 uppercase text-white h-full flex items-center justify-center tracking-wider">
+                            more projects</p>
+                    </span>
+                </a>
+            </section>
+            <!-- works and projects ends here -->
+
+            <!-- why not part -->
+            <section class="h-[50vh] w-full flex items-center justify-center z-20 relative bg-bgimage bg-cover bg-top">
+                <div
+                    class="box w-[70%] md:w-2/5 bg-white h-[230px] mt-[-180px] rounded-3xl shadow-xl capitalize border-black flex items-center justify-center flex-col">
+                    <p class="text-[#C23210] font-bold text-xl">aharipour instalation team</p>
+                </div>
+            </section>
+            <!-- why not part ends here! -->
+
+
+            <!-- ***********footer************* -->
+            <footer class="w-full min-h-[70vh] bg-black flex flex-wrap items-center justify-center relative"
+                id="contact">
+                <div class="relative flex flex-wrap items-center justify-center w-full h-full">
+                    <figure class="w-full flex items-center justify-center ">
+                        <img class="md:w-1/5 sm:w-1/3 w-1/2 h-1/2 sm:h-1/3 md:h-1/5 object-cover"
+                            src="imgs/Tis_Asanbar_Logo-01.svg" alt="">
+                    </figure>
+                    <p class="w-full text-[#0E435B]  flex items-center justify-center p-2 font-light capitalize">iran -
+                        tabriz</p>
+                    <p class="w-full text-[#0E435B]  flex items-center justify-center p-2 font-light">041-35425339</p>
+
+                    <a
+                        class="mx-1 instagram border-[#0e435b44] bg-[#0e435b44] w-12 h-12 duration-300 hover:bg-[#C23210] group rounded-full flex items-center justify-center">
+                        <i
+                            class=" bi bi-instagram text-lg text-white cursor-pointer duration-300 group-hover:text-[#0E435B]"></i>
+                    </a>
+                    <a
+                        class="mx-1 border-[#0e435b44] bg-[#0e435b44] w-12 h-12 duration-300 hover:bg-[#C23210] group rounded-full flex items-center justify-center">
+                        <i
+                            class="bi bi-envelope text-lg text-white cursor-pointer duration-300 group-hover:text-[#0E435B]"></i>
+                    </a>
+                </div>
+
+                <article id="QRCode"
+                    class="w-1/2 bg-white flex-wrap items-center justify-center absolute top-[100%] hidden py-3">
+                    <p class="w-1/2 flex items-center justify-end font-tis1 text-lg font-medium capitalize">click or
+                        scan</p>
+                    <span id="close" class="w-1/3 flex items-center justify-end cursor-pointer"><i
+                            class="bi bi-x-diamond-fill hover:rotate-180 duration-300"></i></span>
+                    <figure class="sm:w-[45%] w-[60%] h-1/3">
+                        <a href="https://www.instagram.com/tiselevator/" target="_blank">
+                            <img src="imgs/IMG_7114.PNG" alt="">
+                        </a>
+                    </figure>
+                </article>
+
+            </footer>
+            <!-- footer ends here -->
+        </div>
+    </main>
+</body>
+<script src="javascript/master.js"></script>
+<script src="swiper.js"></script>
+<script src="javascript/swipper.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
+
+</html>

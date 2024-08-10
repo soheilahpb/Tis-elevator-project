@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tis Elevator</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="font/bootstrap-icons.min.css">
+</head>
+
+<body class="font-primary">
+    <main class="w-full h-screen overflow-y-scroll 2xl:container mx-auto overflow-x-hidden">
+        <div id="main" class="w-full">
+            <!-- <span id="scroll" class="p-2 fixed z-10 top-0 left-0 text-[red] bg-[white] w-[40px] h-[40px]"> </span> -->
+            <section
+                class="w-full relative h-[50vh] md:h-[80vh] bg-proImage bg-cover bg-no-repeat bg-center py-2 px-5 mb-0 flex flex-col justify-between "
+                id="home">
+                <div
+                    class="dark absolute w-full h-full top-0 left-0 bg-gradient-to-t from-[#c231105d] from-5% to-[#ffffffba]">
+                </div>
+                <header class="w-full  flex items-center justify-between relative">
+                    <figure class="md:w-1/5 w-1/3 relative z-10 flex items-center justify-center">
+                        <img src="imgs/IMG_67400.png" class="w-1/2 h-1/2 object-cover" alt="">
+                        <img src="imgs/IMG_674111.png" class="w-1/2 h-1/2 object-cover" alt="">
+                    </figure>
+                    <nav class="w-2/3 hidden md:flex relative z-10  ps-20 ">
+                        <ul class="list-none flex items-center justify-evenly w-full">
+                            <a href="index.html">
+                                <li
+                                    class="group text-white  p-2 capitalize text-[1.2vw] cursor-pointer relative hover:text-[#C23210] duration-300">
+                                    home
+                                    <div
+                                        class=" h-[2px] absolute bg-[#C23210] bottom-0 left-[50%] w-[0] group-hover:w-full group-hover:left-0 duration-300">
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="index.html#about_us">
+                                <li
+                                    class="group text-white p-2 capitalize text-[1.2vw] cursor-pointer relative hover:text-[#C23210] duration-300">
+                                    about us
+                                    <div
+                                        class=" h-[2px] absolute bg-[#C23210] bottom-0 left-[50%] w-[0] group-hover:w-full group-hover:left-0 duration-300">
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="#projects">
+                                <li
+                                    class="group text-[#C23210] p-2 capitalize text-[1.2vw] cursor-pointer relative hover:text-[#C23210] duration-300">
+                                    projects
+                                    <div class=" h-[2px] absolute bg-[#C23210] bottom-0 left-0 w-full"></div>
+                                </li>
+                            </a>
+                            <a href="#contact">
+                                <li
+                                    class="group text-white p-2 capitalize text-[1.2vw] cursor-pointer relative hover:text-[#C23210] duration-300">
+                                    contact us
+                                    <div
+                                        class=" h-[2px] absolute bg-[#C23210] bottom-0 left-[50%] w-0 group-hover:w-full group-hover:left-0 duration-300">
+                                    </div>
+                                </li>
+                            </a>
+                        </ul>
+                    </nav>
+                    <div onclick="open_close()" id="list" class="flex md:hidden relative z-10 cursor-pointer">
+                        <i class="bi bi-list text-white text-3xl hover:text-[#C23210] hover:rotate-90 duration-500"></i>
+                    </div>
+                    <ul id="navigation"
+                        class="absolute w-full top-[100%] bg-[#d69485f3] flex flex-col items-center justify-evenly h-[200px] z-20 md:hidden translate-x-[120%] duration-500">
+                        <a href="index.html" class="w-full h-1/4 flex items-center justify-center">
+                            <li
+                                class="w-full h-full flex items-center ps-7 capitalize text-white text-lg font-medium duration-300 hover:text-[#C23210] hover:bg-[#c2311038] cursor-pointer">
+                                home
+                            </li>
+                        </a>
+                        <a href="index.html#about_us" class="w-full h-1/4 flex items-center justify-center">
+                            <li
+                                class="w-full h-full flex items-center ps-7 capitalize text-white text-lg font-medium duration-300 hover:text-[#C23210] hover:bg-[#c2311038] cursor-pointer">
+                                about
+                            </li>
+                        </a>
+                        <a href="#projects" class="w-full h-1/4 flex items-center justify-center">
+                            <li
+                                class="w-full h-full flex items-center ps-7 capitalize text-white text-lg font-medium duration-300 hover:text-[#C23210] hover:bg-[#c2311038] cursor-pointer">
+                                projects
+                            </li>
+                        </a>
+                        <a href="#contact" class="w-full h-1/4 flex items-center justify-center">
+                            <li
+                                class="w-full h-full flex items-center ps-7 capitalize text-white text-lg font-medium duration-300 hover:text-[#C23210] hover:bg-[#c2311038] cursor-pointer">
+                                contact us
+                            </li>
+                        </a>
+                    </ul>
+                </header>
+                <div
+                    class="w-full mb-20 text-white font-tis2 text-center text-5xl md:text-8xl font-thin capitalize z-10 my-4">
+                    works & projects</div>
+            </section>
+            <!-- first 100vh ends! -->
+
+
+            <!-- projects -->
+            <article class="flex items-center justify-evenly flex-wrap p-5">
+                <a href="_p_one.html" target="_blank" class="w-full sm:w-1/2 md:min-h-[380px]">
+                    <div
+                        class="scale-95 hover:scale-100 duration-300 w-full flex items-center justify-evenly flex-wrap px-7 pt-1 cursor-pointer">
+                        <h3
+                            class="mt-4 md:hidden capitalize flex items-center justify-center text-[#C23210] font-semibold text-lg my-3 lg:justify-start text-center">
+                            6 story building</h3>
+                        <figure class="w-full md:w-2/3  flex items-center justify-center flex-wrap">
+                            <img src="imgs/IMG_6481.webp" alt="" class="w-3/4 h-2/3 object-cover">
+                        </figure>
+                        <hgroup class="w-full md:w-full px-5">
+                            <h3
+                                class="mt-4 capitalize hidden md:flex items-center justify-center text-[#C23210] font-semibold text-lg my-3 lg:justify-start text-center">
+                                6 story building</h3>
+                            <div class="my-3 flex items-center justify-center">
+                                <div class="w-[43%] border-r-2">
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        capacity : 6 <i class="bi bi-person-fill"></i> - 450kg</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        speed : 1 m/s</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Gearless(MR)</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Rope ratio: 1:1</p>
+                                </div>
+                                <div class="w-1/2 ms-8">
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Double door(Three doors on one side and three doors on the other side)</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Car frame: L type</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Motor:Monodrive</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Drive:Advance</p>
+                                </div>
+                            </div>
+                        </hgroup>
+                    </div>
+                </a>
+                <a href="_p_two.html" target="_blank" class="w-full sm:w-1/2 md:min-h-[380px]">
+                    <div
+                        class="scale-95 hover:scale-100 duration-300 w-full flex items-center justify-evenly flex-wrap px-7 pt-1 cursor-pointer">
+                        <h3
+                            class="mt-4 capitalize md:hidden flex items-center justify-center text-[#C23210] font-semibold text-lg my-3 lg:justify-start text-center">
+                            4 story building</h3>
+                        <figure class="w-full md:w-2/3 flex items-center justify-center flex-wrap">
+                            <img src="imgs/IMG_4949.webp" alt="" class="w-3/4 h-2/3 object-cover">
+                        </figure>
+                        <hgroup class="w-full md:w-full px-5">
+                            <h3
+                                class="mt-4 capitalize hidden md:flex items-center justify-center text-[#C23210] font-semibold text-lg my-3 lg:justify-start text-center">
+                                4 story building</h3>
+                            <div class="my-3 flex items-center justify-center">
+                                <div class="w-[43%] border-r-2">
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        capacity : 6 <i class="bi bi-person-fill"></i> - 450kg</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        speed : 1 m/s</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Gearbox(MR)</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Rope ratio: 1:1</p>
+                                </div>
+                                <div class="w-1/2 ms-8">
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                    </p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        semi-automatic</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Motor:Imen-motor(unic)</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Drive:xima</p>
+                                </div>
+                            </div>
+                        </hgroup>
+                    </div>
+                </a>
+                <a href="_P_three.html" target="_blank" class="w-full sm:w-1/2 md:min-h-[380px]">
+                    <div
+                        class="scale-95 hover:scale-100 duration-300 w-full md:min-h-[380px] flex items-center justify-center flex-wrap px-7 pt-1 cursor-pointer">
+                        <h3
+                            class="mt-4 capitalize md:hidden flex items-center justify-center text-[#C23210] font-semibold text-lg my-3 lg:justify-start text-center">
+                            9 story building</h3>
+                        <figure class="w-full md:w-2/3  flex items-center justify-center flex-wrap">
+                            <img src="imgs/IMG_6620.webp" alt="" class="w-3/4 h-2/3 object-cover">
+                        </figure>
+                        <hgroup class="w-full md:w-full  px-5">
+                            <h3
+                                class="mt-4 capitalize hidden md:flex items-center justify-center text-[#C23210] font-semibold text-lg my-3 lg:justify-start text-center">
+                                9 story building</h3>
+                            <div class="my-3 flex items-center justify-center">
+                                <div class="w-[43%] border-r-2">
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        capacity : 12 <i class="bi bi-person-fill"></i> - 900kg</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        speed : 1.6 m/s</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Gearless(MRL)</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Rope ratio: 2:1</p>
+                                </div>
+                                <div class="w-1/2 ms-8">
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Double door(Eight doors on one side and three doors on the other side)</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Car frame: L type</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Motor:Ziehlabegg</p>
+                                    <p
+                                        class="sm:text-sm md:text-sm font-medium lg:text-start my-3 text-center capitalize">
+                                        Drive:Gefran</p>
+                                </div>
+                            </div>
+                        </hgroup>
+                    </div>
+                </a>
+
+
+            </article>
+            <!-- projects -->
+
+            <!-- footer -->
+            <footer class="w-full min-h-[70vh] bg-black flex flex-wrap items-center justify-center relative"
+                id="contact">
+                <div class="relative flex flex-wrap items-center justify-center w-full h-full">
+                    <figure class="w-full flex items-center justify-center ">
+                        <img class="md:w-1/5 sm:w-1/3 w-1/2 h-1/2 sm:h-1/3 md:h-1/5 object-cover"
+                            src="imgs/Tis_Asanbar_Logo-01.svg" alt="">
+                    </figure>
+                    <p class="w-full text-[#0E435B]  flex items-center justify-center p-2 font-light capitalize">iran -
+                        tabriz</p>
+                    <p class="w-full text-[#0E435B]  flex items-center justify-center p-2 font-light">041-35425339</p>
+
+                    <a
+                        class="mx-1 instagram border-[#0e435b44] bg-[#0e435b44] w-12 h-12 duration-300 hover:bg-[#C23210] group rounded-full flex items-center justify-center">
+                        <i
+                            class=" bi bi-instagram text-lg text-white cursor-pointer duration-300 group-hover:text-[#0E435B]"></i>
+                    </a>
+                    <a
+                        class="mx-1 border-[#0e435b44] bg-[#0e435b44] w-12 h-12 duration-300 hover:bg-[#C23210] group rounded-full flex items-center justify-center">
+                        <i
+                            class="bi bi-envelope text-lg text-white cursor-pointer duration-300 group-hover:text-[#0E435B]"></i>
+                    </a>
+                </div>
+
+                <article id="QRCode"
+                    class="w-1/2 bg-white flex-wrap items-center justify-center absolute top-[100%] hidden py-3">
+                    <p class="w-1/2 flex items-center justify-end font-tis1 text-lg font-medium capitalize">click or
+                        scan</p>
+                    <span id="close" class="w-1/3 flex items-center justify-end cursor-pointer"><i
+                            class="bi bi-x-diamond-fill hover:rotate-180 duration-300"></i></span>
+                    <figure class="sm:w-[45%] w-[60%] h-1/3">
+                        <a href="https://www.instagram.com/tiselevator/" target="_blank">
+                            <img src="imgs/IMG_7114.PNG" alt="">
+                        </a>
+                    </figure>
+                </article>
+
+            </footer>
+            <!-- footer ends! -->
+        </div>
+    </main>
+</body>
+
+<script src="javascript/projects.js"></script>
+
+</html>

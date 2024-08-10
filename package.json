@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "serve": "^11.2.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3",
+    "swiper": "^11.0.5"
+  },
+  "main": "index.html",
+  "name": "swiper-effect-coverflow",
+  "scripts": {
+    "build": "echo This is a static template, there is no bundler or bundling involved!",
+    "start": "serve"
+  },
+  "tags": [
+    "swiper"
+  ],
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
