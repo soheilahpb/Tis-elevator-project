@@ -11,7 +11,7 @@ module.exports = {
       },
       backgroundImage: {
         'SecondImage' : "url('../imgs/_head_image2.jpg')",
-        'ThirdImage' : "url('../imgs/_head_image3.JPEG')",
+        'ThirdImage' : "url('../src/imgs/_head_image3.JPEG')",
         'ForthImage' : "url('../imgs/_head_image4.jpg')",
         'proImage' : "url('../imgs/projects.jpg')"
       },
