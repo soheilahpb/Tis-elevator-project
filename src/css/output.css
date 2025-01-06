@@ -1118,17 +1118,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-FirstImage {
-  background-image: url('../imgs/_head_image.jpg');
-}
+
 
 .bg-ThirdImage {
   background-image: url('../imgs/_head_image3.JPEG');
 }
 
-.bg-bgimage {
-  background-image: url('../imgs/cta-background-mandala.jpg');
-}
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));

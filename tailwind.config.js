@@ -10,9 +10,11 @@ module.exports = {
 
       },
       backgroundImage: {
+        'FirstImage' : "url('../imgs/_head_image.jpg')",
         'SecondImage' : "url('../imgs/_head_image2.jpg')",
         'ThirdImage' : "url('../imgs/_head_image3.JPEG')",
-        'ForthImage' : "url('../imgs/_head_image4.jpg')", 
+        'ForthImage' : "url('../imgs/_head_image4.jpg')",
+        'bgimage' : "url('../imgs/cta-background-mandala.jpg')" , 
         'proImage' : "url('../imgs/projects.jpg')"
       },
       animation: {
